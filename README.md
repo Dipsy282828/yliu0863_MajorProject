@@ -4,4 +4,4 @@ For our group task part, we choose Picasso's Dove of peace as our initial drawin
 
 For my individual task part, I  choose perlin noise to make the wings flap. 
 
-You can see the final drawing by following this link. （http://127.0.0.1:5500/MajorProject/）
+![You can see the final drawing by this gif] (Gif//Flying Dove.gif)
