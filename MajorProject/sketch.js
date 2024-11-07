@@ -13,8 +13,8 @@ function draw() {
   background(251, 244, 236); // Clear the background
 
   // Generates the offset value of perlin noise
-  let wingAboveOffset = noise(t1) * 20; // Control the deviation of the upper wing
-  let wingBelowOffset = noise(t2) * 15; // Control the deviation of the below wing
+  let wingAboveOffset = noise(t1) * 40; // Control the deviation of the upper wing
+  let wingBelowOffset = noise(t2) * 40; // Control the deviation of the below wing
 
 
   t1 += 0.01;
