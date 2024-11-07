@@ -1,5 +1,6 @@
 let t1 = 0; // Time variable used to control upper wing Perlin noise
 let t2 = 100; // Time variable used to control below wing Perlin noise
+let t3 = 200; 
 
 function setup() {
   createCanvas(500, 500);
@@ -13,12 +14,18 @@ function draw() {
   background(251, 244, 236); // Clear the background
 
   // Generates the offset value of perlin noise
-  let wingAboveOffset = noise(t1) * 40; // Control the deviation of the upper wing
-  let wingBelowOffset = noise(t2) * 40; // Control the deviation of the below wing
+  let wingAboveOffset = noise(t1) * 60; // Control the deviation of the upper wing
+  let wingBelowOffset = noise(t2) * 20; // Control the deviation of the below wing
+  let leafOffsetX = -noise(t3) * 2; // 控制叶子的水平偏移幅度
+  let leafOffsetY = noise(t3 + 50) * 10; // 控制叶子的垂直偏移幅度
+
+
 
 
   t1 += 0.01;
   t2 += 0.015;
+  t3 += 0.02;
+  
 
   // pigeon's head and chest
   noFill();
@@ -58,10 +65,10 @@ function draw() {
   fill(26, 119, 75);
   stroke(26, 110, 75);
   strokeWeight(2);
-  bezier(440, 46, 460, 100, 490, 96, 440, 46);
-  bezier(479, 30, 452, 75, 479, 96, 479, 30);
-  bezier(500, 40, 458, 80, 470, 100, 500, 40);
-  bezier(497, 70, 443, 91, 485, 94, 498, 70);
+  bezier(440 + leafOffsetX, 46 + leafOffsetY, 460 + leafOffsetX, 100 + leafOffsetY, 490 + leafOffsetX, 96 + leafOffsetY, 440 + leafOffsetX, 46 + leafOffsetY);
+  bezier(479 + leafOffsetX, 30 + leafOffsetY, 452 + leafOffsetX, 75 + leafOffsetY, 479 + leafOffsetX, 96 + leafOffsetY, 479 + leafOffsetX, 30 + leafOffsetY);
+  bezier(500 + leafOffsetX, 40 + leafOffsetY, 458 + leafOffsetX, 80 + leafOffsetY, 470 + leafOffsetX, 100 + leafOffsetY, 500 + leafOffsetX, 40 + leafOffsetY);
+  bezier(497 + leafOffsetX, 70 + leafOffsetY, 443 + leafOffsetX, 91 + leafOffsetY, 485 + leafOffsetX, 94 + leafOffsetY, 498 + leafOffsetX, 70 + leafOffsetY);
 
   // leaves branch
   noFill();
