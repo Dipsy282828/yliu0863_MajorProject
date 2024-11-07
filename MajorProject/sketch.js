@@ -1,6 +1,6 @@
 let t1 = 0; // Time variable used to control upper wing Perlin noise
 let t2 = 100; // Time variable used to control below wing Perlin noise
-let t3 = 200; 
+let t3 = 200; // Time variable used to control leaf Perlin noise
 
 function setup() {
   createCanvas(500, 500);
