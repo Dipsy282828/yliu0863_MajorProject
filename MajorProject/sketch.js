@@ -16,8 +16,8 @@ function draw() {
   // Generates the offset value of perlin noise
   let wingAboveOffset = noise(t1) * 60; // Control the deviation of the upper wing
   let wingBelowOffset = noise(t2) * 20; // Control the deviation of the below wing
-  let leafOffsetX = -noise(t3) * 2; // 控制叶子的水平偏移幅度
-  let leafOffsetY = noise(t3 + 50) * 10; // 控制叶子的垂直偏移幅度
+  let leafOffsetX = -noise(t3) * 2; // Control the horizontal deviation amplitude of the leaf
+  let leafOffsetY = noise(t3 + 50) * 10; // Control the vertical deviation amplitude of the leaf
 
 
 
